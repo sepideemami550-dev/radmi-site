@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رادمی | سیستم ۳۰ روزه بازاریابی محتوایی برای کلینیک‌های زیبایی، پوست و مو</title>
+<meta name="description" content="رادمی یک سیستم ۳۰ روزه بازاریابی محتوایی اینستاگرام برای کلینیک‌های زیبایی، پوست و مو است که با استفاده گسترده از هوش مصنوعی، از تشخیص و استراتژی تا سناریو، پیش‌تولید، آماده‌سازی و تحلیل عملکرد را مدیریت می‌کند.">
+<meta name="keywords" content="بازاریابی محتوا کلینیک, تولید محتوا اینستاگرام کلینیک زیبایی, محتوای کلینیک پوست و مو, سیستم محتوا کلینیک">
+<meta property="og:title" content="رادمی | سیستم ۳۰ روزه محتوا و جذب مشتری">
+<meta property="og:description" content="کلینیک محتوا کم ندارد؛ کلینیک سیستم محتوا ندارد. از فعالیت پراکنده به یک مسیر منظم جذب، اعتمادسازی و ایجاد سرنخ — ویژه کلینیک‌های زیبایی، پوست و مو.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d2015">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4ecdd;
+    --cream-deep:#ebdfc7;
+    --paper:#faf5ea;
+    --forest:#16321f;
+    --forest-deep:#0d2015;
+    --maroon:#6e2140;
+    --gold:#c19452;
+    --gold-soft:#dcc190;
+    --ink:#382f24;
+    --ink-soft:#5a5040;
+    --line: rgba(56,47,36,.16);
+    --shadow: rgba(22,50,31,.16);
+    --radius-swoop: 40% 60% 55% 45% / 45% 40% 60% 55%;
+    --serif:'Noto Serif', 'Vazirmatn', serif;
+    --sans:'Vazirmatn', Tahoma, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:var(--serif);color:var(--forest);margin:0 0 .4em;font-weight:700;letter-spacing:-.01em}
+  h1{font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.22}
+  h2{font-size:clamp(1.6rem,2.9vw,2.35rem);line-height:1.3}
+  h3{font-size:1.15rem;font-weight:600}
+  p{margin:0 0 1em;color:var(--ink-soft);max-width:62ch}
+  .eng{font-family:Georgia,'Times New Roman',serif;letter-spacing:.08em}
+  section{padding:96px 0}
+  @media(max-width:720px){section{padding:64px 0}.wrap{padding:0 20px}}
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible{outline:2px solid var(--maroon);outline-offset:3px}
+
+  /* ---------- top bar : dark, mirrors the brand book's own viewer chrome ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:40;
+    background:var(--forest-deep);
+    border-bottom:1px solid rgba(220,193,144,.22);
+  }
+  .topbar-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--paper)}
+  .logo-grid{display:grid;grid-template-columns:repeat(3,7px);grid-template-rows:repeat(3,7px);gap:2px}
+  .logo-grid span{border-radius:2px;background:var(--gold-soft)}
+  .logo-grid span:nth-child(1){background:#5b8fd6}
+  .logo-grid span:nth-child(5){background:#b25a82}
+  .logo-grid span:nth-child(9){background:var(--gold-soft)}
+  .brand .word{font-family:var(--serif);font-size:1.18rem;color:var(--paper);letter-spacing:.03em}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{
+    color:rgba(250,245,234,.8);text-decoration:none;font-size:.9rem;position:relative;padding:6px 0;
+    transition:color .2s ease;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;right:0;bottom:0;width:0;height:1px;background:var(--gold-soft);
+    transition:width .25s ease;
+  }
+  .nav-links a:hover{color:var(--paper)}
+  .nav-links a:hover::after{width:100%}
+  .top-actions{display:flex;align-items:center;gap:10px}
+  .icon-link{width:38px;height:38px;border-radius:50%;border:1px solid rgba(250,245,234,.28);display:flex;align-items:center;justify-content:center;color:var(--paper);transition:.2s}
+  .icon-link:hover{background:var(--gold-soft);color:var(--forest-deep);border-color:var(--gold-soft)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:999px;border:1px solid transparent;
+    font-family:var(--sans);font-weight:600;font-size:.96rem;cursor:pointer;
+    transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+    text-decoration:none;white-space:nowrap;
+  }
+  .btn-primary{background:var(--forest);color:var(--paper)}
+  .btn-primary:hover{background:var(--forest-deep);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--forest);border-color:var(--forest)}
+  .btn-ghost:hover{background:var(--forest);color:var(--paper)}
+  .btn-gold{background:transparent;color:var(--gold-soft);border-color:rgba(220,193,144,.55)}
+  .btn-gold:hover{background:var(--gold-soft);color:var(--forest-deep);border-color:var(--gold-soft)}
+  .btn-sm{padding:10px 18px;font-size:.88rem}
+  .nav-toggle{display:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(250,245,234,.28);background:transparent;color:var(--paper);align-items:center;justify-content:center;cursor:pointer}
+  .mobile-menu{display:none}
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .top-actions .icon-link{display:none}
+    .nav-toggle{display:flex}
+    .mobile-menu{
+      display:none;flex-direction:column;gap:2px;background:var(--forest-deep);
+      border-top:1px solid rgba(220,193,144,.22);padding:10px 28px 18px;
+    }
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{color:rgba(250,245,234,.82);text-decoration:none;padding:12px 0;font-size:.95rem;border-bottom:1px solid rgba(250,245,234,.1)}
+  }
+  @media(max-width:640px){.top-actions .btn-label{display:none}}
+
+  .form-status{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;font-size:.9rem}
+  .form-status.show{display:block}
+  .form-status.success{background:#e3f0e5;color:#16321f;border:1px solid rgba(22,50,31,.2)}
+  .form-status.error{background:#f6e5e8;color:#6e2140;border:1px solid rgba(110,33,64,.2)}
+  .consent{display:flex;align-items:flex-start;gap:10px;font-size:.84rem;color:var(--ink-soft);margin:2px 0 18px}
+  .consent input{margin-top:5px;accent-color:var(--forest)}
+  .hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 90px}
+  .hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;align-items:stretch}
+  .hero-photo{
+    position:relative;border-radius:28px;overflow:hidden;min-height:520px;
+    background:#20201c;
+    box-shadow:inset 0 0 0 1px rgba(220,193,144,.4);
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  .hero-photo::before{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(160deg, rgba(193,148,82,.16), rgba(13,32,21,.08) 55%);
+    mix-blend-mode:overlay;
+  }
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(100deg, rgba(13,32,21,.05) 40%, var(--cream) 96%);
+  }
+  /* corner-mark: a museum-label frame motif borrowed from the brand book's own picture treatment */
+  .corner-marks::before,.corner-marks::after{content:none}
+  .corner-marks{position:relative}
+  .corner-marks .corner{position:absolute;width:26px;height:26px;border-color:var(--gold-soft);border-style:solid;z-index:3;pointer-events:none}
+  .corner-marks .corner.tr{top:14px;right:14px;border-width:2px 2px 0 0}
+  .corner-marks .corner.bl{bottom:14px;left:14px;border-width:0 0 2px 2px}
+  .hero-copy{
+    background:var(--paper);
+    border-radius:28px;
+    margin-right:-64px;
+    padding:56px 68px 56px 44px;
+    display:flex;flex-direction:column;justify-content:center;
+    box-shadow:0 30px 60px -30px var(--shadow);
+    position:relative;z-index:2;
+  }
+  .eyebrow-line{display:flex;align-items:center;gap:10px;margin-bottom:22px;color:var(--maroon);font-weight:600;font-size:.95rem}
+  .eyebrow-line .dash{width:26px;height:1px;background:var(--gold)}
+  .hero-copy .lede{font-size:1.14rem;color:var(--forest);font-weight:600;margin-bottom:14px}
+  .hero-copy .path{display:flex;flex-wrap:wrap;gap:8px 4px;align-items:center;color:var(--ink-soft);font-size:.92rem;margin:20px 0 30px}
+  .path b{color:var(--forest);font-weight:600}
+  .path .sep{color:var(--gold)}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-photo{min-height:340px;border-radius:24px 24px 0 0}
+    .hero-copy{margin-right:0;border-radius:0 0 24px 24px;padding:40px 28px}
+  }
+
+  /* ---------- swoop section (photo + text, alternating) ---------- */
+  .swoop-section .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .swoop-section.reverse .wrap{grid-template-columns:1.1fr .9fr}
+  .swoop-section.reverse .swoop-photo{order:2}
+  .swoop-photo{position:relative}
+  .swoop-photo .frame{
+    position:relative;border-radius:32px 32px 32px 120px;overflow:hidden;
+    box-shadow:0 40px 70px -40px var(--shadow), inset 0 0 0 1px rgba(220,193,144,.45);
+  }
+  .swoop-section.reverse .swoop-photo .frame{border-radius:32px 32px 120px 32px}
+  .swoop-photo .frame::before{
+    content:"";position:absolute;inset:0;z-index:2;
+    background:linear-gradient(160deg, rgba(193,148,82,.16), rgba(13,32,21,.06) 55%);
+    mix-blend-mode:overlay;pointer-events:none;
+  }
+  .swoop-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .swoop-photo .tag{
+    position:absolute;bottom:-18px;right:-18px;background:var(--forest);color:var(--paper);
+    padding:14px 20px;border-radius:16px;font-family:var(--serif);font-size:.85rem;
+    box-shadow:0 20px 30px -18px var(--shadow);max-width:200px;
+  }
+  .swoop-section.reverse .swoop-photo .tag{right:auto;left:-18px}
+  .kicker{color:var(--maroon);font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .quote-block{
+    background:var(--cream-deep);border-radius:18px;padding:22px 26px;margin:22px 0;
+    border-inline-start:3px solid var(--gold);
+  }
+  .quote-block p{margin:0;color:var(--forest);font-weight:600;font-size:1.02rem}
+  ul.check-list{list-style:none;margin:0 0 1em;padding:0;display:flex;flex-direction:column;gap:11px}
+  ul.check-list li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft)}
+  ul.check-list li svg{flex:none;margin-top:3px;color:var(--gold)}
+
+  /* ---------- deliverables grid ---------- */
+  .deliverables{background:var(--forest-deep);color:var(--paper);border-radius:36px;position:relative;overflow:hidden}
+  .deliverables .wrap{padding:80px 40px}
+  .deliverables h2{color:var(--paper)}
+  .deliverables .kicker{color:var(--gold-soft)}
+  .deliverables p.lead{color:rgba(250,245,234,.75);max-width:64ch}
+  .deliv-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(250,245,234,.16);margin-top:36px}
+  .deliv-item{
+    padding:26px 20px;border-inline-end:1px solid rgba(250,245,234,.16);border-bottom:1px solid rgba(250,245,234,.16);
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .deliv-item svg{color:var(--gold-soft)}
+  .deliv-item span{font-weight:600;font-size:.98rem}
+  @media(max-width:820px){.deliv-grid{grid-template-columns:repeat(2,1fr)}}
+  .deliv-note{
+    margin-top:30px;padding:18px 22px;border:1px solid rgba(250,245,234,.22);border-radius:16px;
+    color:rgba(250,245,234,.78);font-size:.92rem;display:flex;gap:12px;align-items:flex-start
+  }
+
+  /* ---------- process / 6 steps ---------- */
+  .process-head{text-align:center;max-width:640px;margin:0 auto 56px}
+  .process-head p{margin:0 auto}
+  .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+  .steps::before{content:"";position:absolute;top:26px;right:8%;left:8%;height:1px;background:var(--line)}
+  .step{position:relative;padding:0 14px;text-align:center}
+  .step .num{
+    width:52px;height:52px;border-radius:50%;background:var(--paper);border:1px solid var(--gold-soft);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 18px;position:relative;z-index:2;
+    font-family:var(--serif);font-weight:700;color:var(--forest);font-size:1.1rem;
+  }
+  .step:nth-child(odd) .num{background:var(--forest);color:var(--paper);border-color:var(--forest)}
+  .step h3{font-size:.98rem;margin-bottom:8px}
+  .step p{font-size:.88rem;max-width:none}
+  @media(max-width:900px){
+    .steps{grid-template-columns:1fr;gap:28px}
+    .steps::before{display:none}
+    .step{display:flex;gap:16px;text-align:right;padding:0}
+    .step .num{margin:0;flex:none}
+  }
+  .process-note{
+    margin-top:44px;text-align:center;color:var(--ink-soft);font-size:.92rem;
+    display:flex;justify-content:center;gap:8px;align-items:center;
+  }
+
+  /* ---------- full output list ---------- */
+  .output-list{
+    list-style:none;margin:0;padding:0;max-width:900px;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:0 40px;
+    border-top:1px solid var(--line);
+  }
+  .output-list li{
+    counter-increment:out;position:relative;padding:16px 0 16px 0;
+    border-bottom:1px solid var(--line);color:var(--ink-soft);font-size:.96rem;
+    padding-inline-start:34px;
+  }
+  .output-list{counter-reset:out}
+  .output-list li::before{
+    content:counter(out,decimal-leading-zero);position:absolute;inset-inline-start:0;top:16px;
+    font-family:var(--serif);color:var(--gold);font-size:.85rem;
+  }
+  @media(max-width:720px){.output-list{grid-template-columns:1fr}}
+
+  /* ---------- roles ---------- */
+  .roles-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+  .role-card{
+    background:var(--paper);border-radius:24px;padding:34px 30px;border:1px solid var(--line);
+  }
+  .role-card.clinic{background:var(--cream-deep)}
+  .role-card .role-icon{
+    width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+    background:var(--forest);color:var(--paper);
+  }
+  .role-card.clinic .role-icon{background:var(--maroon)}
+  .role-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .role-card li{color:var(--ink-soft);font-size:.95rem;position:relative;padding-inline-start:18px}
+  .role-card li::before{content:"";position:absolute;right:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  @media(max-width:760px){.roles-grid{grid-template-columns:1fr}}
+  .scope-out{
+    margin-top:26px;padding:24px 26px;border:1px dashed var(--line);border-radius:20px;
+  }
+  .scope-out .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .scope-out .tags span{
+    background:var(--cream-deep);padding:7px 14px;border-radius:999px;font-size:.85rem;color:var(--forest);
+  }
+
+  /* ---------- measurement ---------- */
+  .metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+  .metric-pill{
+    border:1px solid var(--line);border-radius:16px;padding:14px 14px;display:flex;align-items:center;gap:10px;
+    font-size:.88rem;color:var(--ink-soft);background:var(--paper);
+  }
+  .metric-pill svg{flex:none;color:var(--maroon)}
+  @media(max-width:720px){.metrics-row{grid-template-columns:1fr 1fr}}
+  .promise-box{
+    background:var(--forest);color:var(--paper);border-radius:22px;padding:30px 32px;margin-top:24px;
+  }
+  .promise-box h3{color:var(--gold-soft);margin-bottom:10px}
+  .promise-box p{color:rgba(250,245,234,.85);margin:0}
+  .caution{
+    margin-top:18px;font-size:.86rem;color:var(--ink-soft);display:flex;gap:10px;align-items:flex-start;
+  }
+  .caution svg{flex:none;color:var(--maroon);margin-top:2px}
+
+  /* ---------- pricing ---------- */
+  .pricing{background:var(--forest-deep);border-radius:36px;color:var(--paper)}
+  .pricing .wrap{padding:80px 40px}
+  .price-top{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-bottom:50px}
+  .price-figure{
+    background:var(--forest);border-radius:26px;padding:44px 40px;text-align:center;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.5);
+  }
+  .price-figure .num{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4rem);color:var(--gold-soft);font-weight:700;line-height:1}
+  .price-figure .label{margin-top:10px;color:rgba(250,245,234,.8)}
+  .split-rows{display:flex;flex-direction:column;gap:14px}
+  .split-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(250,245,234,.16);padding-bottom:14px}
+  .split-row .pct{font-family:var(--serif);font-size:1.5rem;color:var(--gold-soft)}
+  .split-row .desc{color:rgba(250,245,234,.78);font-size:.92rem;max-width:220px;text-align:left}
+  h2.on-dark, h3.on-dark{color:var(--paper)}
+  .terms-faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px}
+  @media(max-width:820px){.price-top,.terms-faq{grid-template-columns:1fr}}
+  .terms-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .terms-list li{
+    color:rgba(250,245,234,.82);font-size:.94rem;padding-inline-start:20px;position:relative;
+  }
+  .terms-list li::before{content:"";position:absolute;right:0;top:.6em;width:6px;height:1px;background:var(--gold-soft)}
+  .faq-item{border-bottom:1px solid rgba(250,245,234,.16)}
+  .faq-item summary{
+    cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:16px;
+    color:var(--paper);font-weight:600;font-size:.96rem;list-style:none;align-items:center;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary .plus{flex:none;color:var(--gold-soft);font-family:var(--serif);font-size:1.3rem;transition:transform .2s}
+  .faq-item[open] summary .plus{transform:rotate(45deg)}
+  .faq-item p{color:rgba(250,245,234,.75);padding-bottom:18px;margin:0;font-size:.92rem;max-width:none}
+
+  /* ---------- final CTA / contact ---------- */
+  .contact-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+  @media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+  .contact-channels{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+  .channel{
+    display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;
+    text-decoration:none;color:var(--ink);transition:.2s;background:var(--paper);
+  }
+  .channel:hover{border-color:var(--forest);transform:translateX(-2px)}
+  .channel .ic{
+    width:44px;height:44px;border-radius:50%;background:var(--cream-deep);display:flex;align-items:center;justify-content:center;
+    color:var(--forest);flex:none;
+  }
+  .channel .meta b{display:block;font-size:.96rem;color:var(--forest)}
+  .channel .meta span{font-size:.85rem;color:var(--ink-soft)}
+
+  .form-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:36px;
+  }
+  .form-card h3{margin-bottom:6px}
+  .form-card > p{font-size:.9rem;margin-bottom:24px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.88rem;color:var(--forest);font-weight:600;margin-bottom:7px}
+  .field input,.field textarea{
+    width:100%;border:1px solid var(--line);background:var(--cream);border-radius:12px;
+    padding:12px 14px;font-family:var(--sans);font-size:.95rem;color:var(--ink);resize:vertical;
+  }
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--forest)}
+  .form-submit{width:100%;margin-top:6px}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:52px 0 34px}
+  .footer-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+  .footer-tag{color:var(--ink-soft);font-size:.9rem;margin-top:8px}
+  .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem}
+  .footer-links a:hover{color:var(--forest)}
+  .footer-bottom{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:var(--ink-soft)}
+
+  /* ---------- flipbook modal ---------- */
+  .flip-modal{
+    position:fixed;inset:0;background:rgba(13,20,15,.86);z-index:100;
+    display:none;align-items:center;justify-content:center;padding:28px;
+  }
+  .flip-modal.open{display:flex}
+  .flip-box{
+    position:relative;max-width:960px;width:100%;background:var(--forest-deep);border-radius:20px;overflow:hidden;
+    box-shadow:0 50px 100px rgba(0,0,0,.5);
+  }
+  .flip-stage{position:relative;aspect-ratio:1484/1060;background:#0d150e}
+  .flip-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .3s ease}
+  .flip-stage img.active{opacity:1}
+  .flip-controls{display:flex;align-items:center;justify-content:center;gap:14px;padding:16px;background:var(--forest-deep)}
+  .flip-controls button{
+    background:transparent;border:1px solid rgba(250,245,234,.3);color:var(--paper);width:40px;height:40px;border-radius:50%;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;
+  }
+  .flip-controls button:hover{background:rgba(250,245,234,.12)}
+  .flip-controls button:disabled{opacity:.3;cursor:default}
+  .flip-count{color:var(--paper);font-size:.9rem;min-width:60px;text-align:center;direction:ltr}
+  .flip-close{
+    position:absolute;top:14px;left:14px;z-index:5;width:38px;height:38px;border-radius:50%;
+    background:rgba(13,20,15,.7);border:1px solid rgba(250,245,234,.3);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;
+  }
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{transition:none;opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <span class="word">RADMI</span>
+    </div>
+    <nav class="nav-links" aria-label="ناوبری اصلی">
+      <a href="#what-is">رادمی چیست</a>
+      <a href="#deliverables">دامنه پکیج</a>
+      <a href="#process">مراحل کار</a>
+      <a href="#pricing">قیمت‌گذاری</a>
+    </nav>
+    <div class="top-actions">
+      <a class="icon-link" href="tel:+982177352977" aria-label="تماس تلفنی" title="تماس تلفنی">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a class="icon-link" href="https://wa.me/989127050799" target="_blank" rel="noopener" aria-label="واتساپ" title="واتساپ">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.8 9.3 7.3c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      </a>
+      <a class="btn btn-gold btn-sm" href="#contact"><span class="btn-label">درخواست مشاوره</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="باز کردن منو" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="ناوبری موبایل">
+    <a href="#what-is">رادمی چیست</a>
+    <a href="#deliverables">دامنه پکیج</a>
+    <a href="#process">مراحل کار</a>
+    <a href="#pricing">قیمت‌گذاری</a>
+    <a href="#contact">تماس و درخواست مشاوره</a>
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-photo reveal corner-marks">
+      <img src="assets/bg_1.jpg" alt="فضای پذیرش یک کلینیک زیبایی مدرن" fetchpriority="high">
+      <span class="corner tr"></span><span class="corner bl"></span>
+    </div>
+    <div class="hero-copy reveal">
+      <div class="eyebrow-line"><span class="dash"></span> سیستم محتوا برای کلینیک‌های زیبایی، پوست و مو</div>
+      <h1>رادمی؛ سی روز برای ساختن یک مسیر منظم تا جذب مشتری</h1>
+      <p class="lede">یک سیستم محتوایی، نه صرفاً چند پست و ریلز.</p>
+      <p>رادمی فعالیت پیج شما را از حالت پراکنده و سلیقه‌ای خارج می‌کند و به یک مسیر منظم برای جذب مخاطب، اعتمادسازی و ایجاد فرصت فروش تبدیل می‌کند. هدف ما بیشتر پست‌کردن نیست؛ هر محتوا باید مأموریت روشنی داشته باشد و مخاطب را یک قدم جلو ببرد.</p>
+      <div class="path">
+        <b>محتوا</b><span class="sep">←</span><b>توجه</b><span class="sep">←</span><b>اعتماد</b><span class="sep">←</span><b>سرنخ</b><span class="sep">←</span><b>فرصت فروش</b>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">درخواست ارزیابی رادمی</a>
+        <a class="btn btn-ghost" href="catalog.html" target="_blank" rel="noopener">مشاهده کاتالوگ رادمی</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT IS RADMI ============ -->
+<section class="swoop-section" id="what-is">
+  <div class="wrap">
+    <div class="swoop-photo reveal">
+      <div class="frame"><img src="assets/bg_2.jpg" alt="برنامه‌ریزی سیستم محتوایی کلینیک" loading="lazy"><span class="corner tr" style="border-color:var(--gold-soft)"></span></div>
+      <div class="tag eng">Systematic Content.<br>Smarter Execution.</div>
+    </div>
+    <div class="reveal">
+      <div class="kicker"><span class="dot"></span>رادمی چیست؟</div>
+      <h2>برای چه کلینیک‌هایی مناسب است؟</h2>
+      <p>رادمی یک سیستم ۳۰ روزه بازاریابی محتوایی اینستاگرام برای کلینیک‌های زیبایی، پوست و مو است. کمک می‌کند تولید محتوای پراکنده به یک سیستم هدفمند تبدیل شود، محتوا به خدمات واقعی کلینیک متصل شود، اعتماد مخاطب افزایش یابد و مخاطب مناسب وارد مسیر فروش شود.</p>
+      <div class="quote-block">
+        <p>مسئله اصلی این نیست که کلینیک محتوا کم دارد؛ مسئله این است که کلینیک «سیستم محتوا» ندارد.</p>
+      </div>
+      <p>یعنی معلوم نیست چه محتوایی، برای چه مخاطبی، با چه پیامی، در چه قالبی و چه زمانی باید منتشر شود — و از کجا بفهمیم نتیجه داده یا نه. رادمی این پراکندگی را به یک سیستم تبدیل می‌کند. مناسب کلینیک‌هایی است که:</p>
+      <ul class="check-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>خدمات خوبی دارند، ولی محتوایشان منظم و هدفمند نیست.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>محتوا تولید می‌کنند، ولی ارتباط آن با جذب مشتری مشخص نیست.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>پیج ظاهر یا فعالیت دارد، ولی سیستم محتوایی ندارد.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>مدیر کلینیک برای برنامه‌ریزی، سناریونویسی و پیگیری محتوا وقت کافی ندارد.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section id="deliverables">
+  <div class="wrap">
+    <div class="deliverables reveal">
+      <div class="wrap" style="max-width:100%;padding:80px 40px">
+        <div class="kicker" style="color:var(--gold-soft)"><span class="dot" style="background:var(--gold-soft)"></span>دامنه پکیج</div>
+        <h2>دقیقاً چه چیزی دریافت می‌کنید؟</h2>
+        <p class="lead">دامنه روشن یعنی بدانید دقیقاً چه چیزی داخل پکیج است و چه چیزی خدمت افزوده محسوب می‌شود. این‌ها پایه‌ی نسخه‌ی ۳۰ روزه پایلوت است.</p>
+
+        <div class="deliv-grid">
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6" fill="currentColor"/></svg><span>تشخیص و استراتژی</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg><span>برنامه محتوایی ۳۰ روزه</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m9 9 6 3-6 3z"/></svg><span>۸ ریلز</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="7" height="14" rx="1"/><rect x="14" y="5" width="7" height="14" rx="1"/></svg><span>۴ پست / کاروسل</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="18" rx="3" stroke-dasharray="3 3"/></svg><span>حدود ۴۰ استوری</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 1 1-4-7.2"/><path d="M21 4v6h-6"/></svg><span>کپشن، CTA و کاور</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Bio و Highlights</span></div>
+          <div class="deliv-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M12 20V4M20 20v-7"/></svg><span>انتشار و تحلیل</span></div>
+        </div>
+
+        <div class="deliv-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          تعداد و شکل نهایی تحویل‌ها در همان قرارداد مشتری تثبیت می‌شود؛ دامنه بالا مبنای نسخه‌ی فعلی پکیج است.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6-STEP PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="process-head reveal">
+      <div class="kicker" style="justify-content:center"><span class="dot"></span>ساختار همکاری ۳۰ روزه</div>
+      <h2>شش مرحله، از تشخیص تا یادگیری</h2>
+      <p>مدلی که به تدریج تنظیم می‌شود؛ نتیجه هر دوره ورودی دوره بعد است.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">۱</div><h3>تشخیص و طراحی</h3><p>بررسی وضعیت فعلی پیج، خدمات، مخاطب و نقاط ضعف؛ انتخاب سه گلوگاه اصلی برای تمرکز دوره.</p></div>
+      <div class="step"><div class="num">۲</div><h3>طراحی سیستم محتوای دوره</h3><p>برای هر محتوا هدف، مخاطب، پیام، شاخص موفقیت، قالب، Hook و CTA مشخص می‌شود.</p></div>
+      <div class="step"><div class="num">۳</div><h3>سناریو و پیش‌تولید</h3><p>سناریو، Storyboard، Shot List و راهنمای تولید آماده می‌شود تا کلینیک از صفر تصمیم نگیرد.</p></div>
+      <div class="step"><div class="num">۴</div><h3>تولید و آماده‌سازی</h3><p>مدل Remote-first؛ برنامه‌ریزی، طراحی و تولید دارایی با هوش مصنوعی از راه دور انجام می‌شود.</p></div>
+      <div class="step"><div class="num">۵</div><h3>اتصال به مسیر تبدیل</h3><p>هر محتوا مخاطب را به مرحله بعد می‌برد: بازدید پروفایل، فالو، سیو، دایرکت یا مسیر فروش.</p></div>
+      <div class="step"><div class="num">۶</div><h3>تحلیل و بهینه‌سازی</h3><p>حلقه یادگیری: اجرا → داده → تحلیل → اصلاح → اجرای بهتر در دوره بعد.</p></div>
+    </div>
+    <div class="process-note reveal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+      یک دوره از تاریخ فعال‌سازی محاسبه می‌شود؛ یعنی پس از تکمیل قرارداد، پرداخت اولیه و دریافت دسترسی‌ها و اطلاعات ضروری.
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL OUTPUT LIST ============ -->
+<section>
+  <div class="wrap">
+    <div class="process-head reveal">
+      <div class="kicker" style="justify-content:center"><span class="dot"></span>خروجی‌های نهایی پکیج</div>
+      <h2>چیزی که در پایان دوره روی میز شماست</h2>
+      <p>خانواده‌ای از دارایی‌ها، نه یک فایل پراکنده.</p>
+    </div>
+    <ul class="output-list reveal">
+      <li>تشخیص وضعیت فعلی پیج و سه گلوگاه اصلی</li>
+      <li>جهت و استراتژی محتوایی دوره</li>
+      <li>برنامه محتوای دوره</li>
+      <li>Brief هر محتوا</li>
+      <li>Hook و سناریوی محتوا</li>
+      <li>برنامه پیش‌تولید و Shot List در صورت نیاز</li>
+      <li>راهنمای تولید برای کلینیک</li>
+      <li>دارایی‌های تصویری یا هوش مصنوعی لازم</li>
+      <li>تدوین و آماده‌سازی محتوای توافق‌شده</li>
+      <li>CTA و مسیر تبدیل هر محتوا</li>
+      <li>کنترل کیفیت قبل از انتشار</li>
+      <li>تحلیل داده‌های دوره</li>
+      <li>پیشنهادهای بهبود برای دوره بعد</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ EXECUTION MODEL ============ -->
+<section class="swoop-section reverse">
+  <div class="wrap">
+    <div class="swoop-photo reveal">
+      <div class="frame"><img src="assets/bg_5.jpg" alt="تولید محتوای کلینیک با هدایت رادمی" loading="lazy"><span class="corner bl" style="border-color:var(--gold-soft)"></span></div>
+    </div>
+    <div class="reveal">
+      <div class="kicker"><span class="dot"></span>مدل اجرایی رادمی</div>
+      <h2>هوش‌مصنوعی‌محور، دورکاری‌محور</h2>
+      <p>مدل همکاری طوری طراحی شده که بخش بزرگی از تحقیق، تحلیل، ایده، سناریو و پیش‌تولید با کمک هوش مصنوعی انجام شود؛ در نتیجه زمان و اصطکاک اجرایی کمتر می‌شود و تیم کلینیک بیشتر روی اطلاعات تخصصی، تأییدهای حساس و تولید فیلم خام تمرکز می‌کند.</p>
+      <div class="roles-grid" style="margin-top:28px">
+        <div class="role-card">
+          <div class="role-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></div>
+          <h3>نقش رادمی</h3>
+          <ul>
+            <li>تحقیق و تحلیل</li><li>استراتژی و برنامه محتوایی</li><li>ایده، سناریو و Shot List</li>
+            <li>پیش‌تولید و تولید دارایی با AI</li><li>تدوین و آماده‌سازی توافق‌شده</li>
+            <li>کنترل کیفیت قبل از انتشار</li><li>تحلیل نتیجه و پیشنهاد بهبود</li>
+          </ul>
+        </div>
+        <div class="role-card clinic">
+          <div class="role-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h3>نقش کلینیک</h3>
+          <ul>
+            <li>ارائه اطلاعات صحیح و به‌روز</li><li>تأیید محتوای تخصصی و حساس</li>
+            <li>تهیه تصاویر و ویدئوهای اختصاصی محل</li><li>هماهنگی برای فیلم خام موردنیاز</li>
+            <li>دسترسی به داده‌های لازم برای تحلیل</li><li>پاسخ به تأییدها در زمان توافق‌شده</li>
+          </ul>
+        </div>
+      </div>
+      <div class="scope-out">
+        <b style="color:var(--forest)">چه چیزی داخل هسته پکیج نیست؟</b>
+        <div class="tags">
+          <span>فیلم‌برداری حضوری مستمر</span><span>ادمین دائمی دایرکت و کامنت</span>
+          <span>تبلیغات پولی گسترده</span><span>مدیریت کامل فروش و CRM</span>
+          <span>طراحی کامل برند یا سایت</span><span>اصلاحات یا تولید مازاد خارج از دامنه توافق‌شده</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEASURING SUCCESS ============ -->
+<section class="swoop-section">
+  <div class="wrap">
+    <div class="swoop-photo reveal">
+      <div class="frame"><img src="assets/bg_6.jpg" alt="تحلیل و سنجش عملکرد محتوای کلینیک" loading="lazy"><span class="corner tr" style="border-color:var(--gold-soft)"></span></div>
+    </div>
+    <div class="reveal">
+      <div class="kicker"><span class="dot"></span>سنجش موفقیت</div>
+      <h2>چطور موفقیت را می‌سنجیم؟</h2>
+      <p>تمرکز روی رفتار مخاطب و کیفیت مسیر است، نه فقط لایک.</p>
+      <div class="metrics-row">
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>زمان تماشا</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 1 1-4-7.2"/><path d="M21 4v6h-6"/></svg>اشتراک‌گذاری</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21 12 17l-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>ذخیره (Save)</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>بازدید پروفایل</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>فالو</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h8M8 8h8M8 16h5"/></svg>دایرکت (DM)</div>
+        <div class="metric-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg>سرنخ (Lead)</div>
+      </div>
+      <div class="promise-box">
+        <h3>وعده رادمی</h3>
+        <p>در پایان دوره، پیج کلینیک باید مسیر محتوایی روشن‌تر، محتوای هدفمندتر و داده‌ای بهتر برای تصمیم‌گیری دوره بعد داشته باشد.</p>
+      </div>
+      <div class="caution">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        رادمی فروش، تعداد مشتری یا وایرال‌شدن را تضمین نمی‌کند؛ نتیجه نهایی به کیفیت خدمات کلینیک، قیمت، پاسخ‌گویی، فرایند فروش و شرایط بازار نیز وابسته است.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="pricing reveal">
+      <div class="wrap" style="max-width:100%;padding:80px 40px">
+        <div class="kicker" style="color:var(--gold-soft)"><span class="dot" style="background:var(--gold-soft)"></span>سرمایه‌گذاری و شرایط شروع</div>
+        <h2 class="on-dark">نسخه فعلی پایلوت / اجرایی</h2>
+
+        <div class="price-top">
+          <div class="price-figure">
+            <div class="num">۲۹.۸</div>
+            <div class="label eng" style="letter-spacing:.02em">میلیون تومان</div>
+          </div>
+          <div class="split-rows">
+            <div class="split-row"><span class="pct">٪۷۰</span><span class="desc">شروع همکاری، پس از تأیید دامنه و قرارداد</span></div>
+            <div class="split-row"><span class="pct">٪۳۰</span><span class="desc">پس از تأیید اولین بسته محتوا</span></div>
+          </div>
+        </div>
+
+        <div class="terms-faq">
+          <div>
+            <h3 class="on-dark" style="margin-bottom:16px">شرایط مهم</h3>
+            <ul class="terms-list">
+              <li>مدت ۳۰ روز از تاریخ فعال‌سازی محاسبه می‌شود.</li>
+              <li>فعال‌سازی پس از قرارداد، پرداخت اولیه و تکمیل دسترسی‌ها و اطلاعات ضروری انجام می‌شود.</li>
+              <li>دامنه نهایی، اصلاحات، زمان‌های تأیید و جزئیات تحویل در همان قرارداد همکاری ثبت می‌شود.</li>
+              <li>خدمات خارج از محدوده توافق‌شده، جداگانه برآورد می‌شوند.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="on-dark" style="margin-bottom:6px">پرسش‌های پرتکرار</h3>
+            <details class="faq-item" open>
+              <summary>آیا برای شروع باید تیم تولید محتوای کامل داشته باشیم؟<span class="plus">+</span></summary>
+              <p>خیر؛ اطلاعات، تأییدها و مواد خام لازم باید فراهم شود.</p>
+            </details>
+            <details class="faq-item">
+              <summary>آیا رادمی برای فیلم‌برداری حضوری می‌آید؟<span class="plus">+</span></summary>
+              <p>در هسته پکیج نیست و در صورت نیاز جداگانه بررسی می‌شود.</p>
+            </details>
+            <details class="faq-item">
+              <summary>آیا فروش یا تعداد مراجعه تضمین می‌شود؟<span class="plus">+</span></summary>
+              <p>خیر؛ تمرکز بر کیفیت مسیر، یادگیری و بهینه‌سازی است.</p>
+            </details>
+            <details class="faq-item">
+              <summary>هوش مصنوعی دقیقاً کجا استفاده می‌شود؟<span class="plus">+</span></summary>
+              <p>در تحقیق، تحلیل، ایده، سناریو، پیش‌تولید، آماده‌سازی و تحلیل.</p>
+            </details>
+            <details class="faq-item">
+              <summary>۳۰ روز از چه زمانی شروع می‌شود؟<span class="plus">+</span></summary>
+              <p>از تاریخ فعال‌سازی، یعنی پس از تکمیل مراحل قرارداد و دسترسی‌ها.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA / CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-wrap">
+      <div class="reveal">
+        <div class="kicker"><span class="dot"></span>قدم بعدی</div>
+        <h2>اگر می‌خواهید پیج «تولید پراکنده» را به «سیستم محتوا» تبدیل کنید</h2>
+        <p>شروع همکاری با یک بررسی کوتاه از وضعیت فعلی پیج و هدف ۳۰ روز آینده انجام می‌شود. پس از تأیید دامنه همکاری و قرارداد، دوره از تاریخ فعال‌سازی آغاز خواهد شد.</p>
+        <p>هر کدام از راه‌های زیر برایتان راحت‌تر است، در دسترس است — می‌توانید مستقیم تماس بگیرید، در واتساپ پیام بدهید یا فرم را پر کنید.</p>
+
+        <div class="contact-channels">
+          <a class="channel" href="tel:+982177352977">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span class="meta"><b>تماس تلفنی</b><span>۰۲۱-۷۷۳۵۲۹۷۷</span></span>
+          </a>
+          <a class="channel" href="https://wa.me/989127050799" target="_blank" rel="noopener">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.8 9.3 7.3c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></span>
+            <span class="meta"><b>واتساپ</b><span>۰۹۱۲۷۰۵۰۷۹۹</span></span>
+          </a>
+          <a class="channel" href="https://www.instagram.com/radmi.idea/" target="_blank" rel="noopener">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span>
+            <span class="meta"><b>اینستاگرام</b><span>@RADMI.IDEA</span></span>
+          </a>
+        </div>
+      </div>
+
+      <form class="form-card reveal" id="leadForm">
+        <h3>درخواست ارزیابی رایگان رادمی</h3>
+        <p>اطلاعات را وارد کنید تا وضعیت پیج و مناسب‌بودن سیستم رادمی برای کلینیک شما بررسی شود.</p>
+        <div class="field"><label for="fname">نام و نام‌خانوادگی</label><input id="fname" name="name" required autocomplete="name" placeholder="مثلاً سارا محمدی"></div>
+        <div class="field"><label for="fclinic">نام کلینیک</label><input id="fclinic" name="clinic" required autocomplete="organization" placeholder="نام کلینیک پزشکی یا زیبایی"></div>
+        <div class="field"><label for="fphone">شماره موبایل</label><input id="fphone" name="phone" required autocomplete="tel" placeholder="09xxxxxxxxx" inputmode="tel" pattern="09[0-9]{9}"></div>
+        <div class="field"><label for="finstagram">آدرس پیج اینستاگرام</label><input id="finstagram" name="instagram" required placeholder="@clinic یا لینک پیج" dir="ltr"></div>
+        <div class="field"><label for="fcity">شهر (اختیاری)</label><input id="fcity" name="city" autocomplete="address-level2" placeholder="مثلاً تهران"></div>
+        <div class="field"><label for="fservice">خدمات اصلی کلینیک (اختیاری)</label><input id="fservice" name="service" placeholder="مثلاً پوست، مو، لیزر یا زیبایی"></div>
+        <div class="field"><label for="fmsg">هدف یا توضیح کوتاه (اختیاری)</label><textarea id="fmsg" name="message" rows="3" placeholder="وضعیت فعلی پیج یا هدف ۳۰ روز آینده"></textarea></div>
+        <div class="hp-field" aria-hidden="true"><label for="fwebsite">وب‌سایت</label><input id="fwebsite" name="website" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input id="fconsent" name="consent" type="checkbox" required><span>با ثبت این فرم، با تماس رادمی برای بررسی درخواست موافقم.</span></label>
+        <button type="submit" class="btn btn-primary form-submit" id="submitBtn">ثبت درخواست ارزیابی</button>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <div class="logo-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span class="word">RADMI</span>
+        </div>
+        <p class="footer-tag eng">Systematic Content. Smarter Execution.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#what-is">رادمی چیست</a>
+        <a href="#deliverables">دامنه پکیج</a>
+        <a href="#pricing">سرمایه‌گذاری</a>
+        <a class="btn btn-ghost btn-sm" style="border:1px solid var(--line)" href="catalog.html" target="_blank" rel="noopener">کاتالوگ رادمی</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© ۱۴۰۵ رادمی. تمامی حقوق محفوظ است.</span>
+      <span>سیستم محتوایی ویژه کلینیک‌های زیبایی، پوست و مو</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', ()=>{
+    const open = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    mobileMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  }));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // این نشانی پس از ساخت وب‌هوک Make جایگزین می‌شود.
+  const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/9iqwfbeogj2r5dtsinan6w3uegcu563g';
+  document.getElementById('leadForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const form = e.currentTarget;
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    const name = document.getElementById('fname').value.trim();
+    const clinic = document.getElementById('fclinic').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const instagram = document.getElementById('finstagram').value.trim();
+    const city = document.getElementById('fcity').value.trim();
+    const service = document.getElementById('fservice').value.trim();
+    const msg = document.getElementById('fmsg').value.trim();
+    if(document.getElementById('fwebsite').value) return;
+    const payload = {
+      name, clinic, phone, instagram, city, service, message:msg,
+      lead_source_category:'organic_inbound',
+      lead_source_detail:'radmi_website_landing',
+      page_url:location.href,
+      submitted_at:new Date().toISOString(),
+      utm_source:new URLSearchParams(location.search).get('utm_source') || '',
+      utm_medium:new URLSearchParams(location.search).get('utm_medium') || '',
+      utm_campaign:new URLSearchParams(location.search).get('utm_campaign') || ''
+    };
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'در حال ثبت درخواست…';
+    status.className = 'form-status';
+    try{
+      if(!MAKE_WEBHOOK_URL) throw new Error('fallback');
+      const formPayload = new FormData();
+      Object.entries(payload).forEach(([key,value])=>formPayload.append(key, value));
+      await fetch(MAKE_WEBHOOK_URL, {method:'POST', mode:'no-cors', body:formPayload});
+      status.textContent = 'درخواست شما با موفقیت ثبت شد. نتیجه بررسی اولیه از طریق تماس یا واتساپ اعلام می‌شود.';
+      status.className = 'form-status success show';
+      form.reset();
+    }catch(error){
+      const text = `سلام رادمی،\nنام: ${name}\nکلینیک: ${clinic}\nشماره تماس: ${phone}\nپیج اینستاگرام: ${instagram}${city ? '\nشهر: '+city : ''}${service ? '\nخدمات اصلی: '+service : ''}${msg ? '\nتوضیح: '+msg : ''}\n\nبرای ارزیابی رایگان رادمی پیام می‌دهم.`;
+      window.open(`https://wa.me/989127050799?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+      status.textContent = 'برای تکمیل درخواست، پیام آماده‌شده را در واتساپ ارسال کنید.';
+      status.className = 'form-status success show';
+    }finally{
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'ثبت درخواست ارزیابی';
+    }
+  });
+</script>
+</body>
+</html>
