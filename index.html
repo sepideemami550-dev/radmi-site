@@ -127,7 +127,10 @@
   .form-status.error{background:#f6e5e8;color:#6e2140;border:1px solid rgba(110,33,64,.2)}
   .consent{display:flex;align-items:flex-start;gap:10px;font-size:.84rem;color:var(--ink-soft);margin:2px 0 18px}
   .consent input{margin-top:5px;accent-color:var(--forest)}
-  .hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+  .hp-field{
+    position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;
+    overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;
+  }
 
   /* ---------- hero ---------- */
   .hero{padding:56px 0 90px}
